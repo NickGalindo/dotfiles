@@ -144,6 +144,12 @@ _G.packer_plugins = {
     path = "/home/vyral/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-lspconfig"] = {
+    config = { 'require("setup/nvim-lspconfig")' },
+    loaded = true,
+    path = "/home/vyral/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
+  },
   ["nvim-notify"] = {
     config = { 'require("setup/nvim-notify")' },
     loaded = true,
@@ -181,34 +187,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: cmp-tabnine
-time([[Config for cmp-tabnine]], true)
-require("setup/cmp-tabnine")
-time([[Config for cmp-tabnine]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require("setup/nvim-tree")
-time([[Config for nvim-tree.lua]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require("setup/nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
--- Config for: feline.nvim
-time([[Config for feline.nvim]], true)
-require("setup/feline")
-time([[Config for feline.nvim]], false)
--- Config for: nvim-notify
-time([[Config for nvim-notify]], true)
-require("setup/nvim-notify")
-time([[Config for nvim-notify]], false)
--- Config for: onedark.nvim
-time([[Config for onedark.nvim]], true)
-require("setup/onedark")
-time([[Config for onedark.nvim]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-require("setup/gitsigns")
-time([[Config for gitsigns.nvim]], false)
 -- Config for: bufferline.nvim
 time([[Config for bufferline.nvim]], true)
 require("setup/bufferline")
@@ -217,6 +195,38 @@ time([[Config for bufferline.nvim]], false)
 time([[Config for nvim-cmp]], true)
 require("setup/nvim-cmp")
 time([[Config for nvim-cmp]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require("setup/nvim-tree")
+time([[Config for nvim-tree.lua]], false)
+-- Config for: cmp-tabnine
+time([[Config for cmp-tabnine]], true)
+require("setup/cmp-tabnine")
+time([[Config for cmp-tabnine]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+require("setup/gitsigns")
+time([[Config for gitsigns.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require("setup/nvim-lspconfig")
+time([[Config for nvim-lspconfig]], false)
+-- Config for: nvim-notify
+time([[Config for nvim-notify]], true)
+require("setup/nvim-notify")
+time([[Config for nvim-notify]], false)
+-- Config for: feline.nvim
+time([[Config for feline.nvim]], true)
+require("setup/feline")
+time([[Config for feline.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require("setup/nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
+-- Config for: onedark.nvim
+time([[Config for onedark.nvim]], true)
+require("setup/onedark")
+time([[Config for onedark.nvim]], false)
 if should_profile then save_profiles(1) end
 
 end)

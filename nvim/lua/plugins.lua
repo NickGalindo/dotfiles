@@ -91,6 +91,11 @@ return require("packer").startup({
       requires = 'hrsh7th/nvim-cmp',
       config = get_setup("cmp-tabnine")
     })
+    -- LSP for nvim setup
+    use ({
+      'neovim/nvim-lspconfig',
+      config = get_setup("nvim-lspconfig")
+    })
 
     if packer_bootstrap then
       require("packer").sync()

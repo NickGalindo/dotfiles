@@ -5,5 +5,10 @@ nvim_tree.setup({
     },
     git = {
       ignore = false,
-    }
+    },
+    log = {
+      types = {
+        copy_paste = true
+      },
+    },
 })
