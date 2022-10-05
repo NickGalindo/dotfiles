@@ -96,6 +96,11 @@ return require("packer").startup({
       'neovim/nvim-lspconfig',
       config = get_setup("nvim-lspconfig")
     })
+    use ({
+      "folke/trouble.nvim",
+      requires = "kyazdani42/nvim-web-devicons",
+      config = get_setup("trouble")
+    })
 
     if packer_bootstrap then
       require("packer").sync()
