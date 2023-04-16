@@ -22,3 +22,11 @@ lsp.clangd.setup{
 lsp.cmake.setup{
 
 }
+lsp.tsserver.setup{
+  on_attach = on_attach
+}
+
+-- Turn off virtual text for diagnostics
+vim.diagnostic.config({
+  virtual_text = false,
+})

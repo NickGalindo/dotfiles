@@ -84,7 +84,7 @@ return require("packer").startup({
       },
       config = get_setup("nvim-cmp")
     })
-    -- Tabnine autocomplete on cmp 
+    -- Tabnine autocomplete on cmp
     use ({
       'tzachar/cmp-tabnine',
       run = './install.sh',
@@ -101,6 +101,42 @@ return require("packer").startup({
       requires = "kyazdani42/nvim-web-devicons",
       config = get_setup("trouble")
     })
+    use ({
+      'nvim-telescope/telescope.nvim', tag = '0.1.1',-- or , branch = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} },
+      config = get_setup("telescope")
+    })
+    use ({
+      "windwp/nvim-autopairs",
+      config = get_setup("nvim-autopairs")
+    })
+    use ({
+      "norcalli/nvim-colorizer.lua",
+      config = get_setup("nvim-colorizer")
+    })
+    --use({
+    --  "glepnir/lspsaga.nvim",
+    --  opt = true,
+    --  branch = "main",
+    --  event = "LspAttach"
+    --  config = function()
+    --    require("lspsaga").setup({})
+    --end,
+    --  requires = {
+    --    {"nvim-tree/nvim-web-devicons"}, --Please make sure you install markdown and markdown_inline parser
+    --    {"nvim-treesitter/nvim-treesitter"}
+    --  }
+    --})
+
+    -- Markdown Preview
+    -- use({
+    --   "iamcco/markdown-preview.nvim",
+    --   run = function() vim.fn["mkdp#util#install"]() end,
+    --   config = get_setup("markdown-preview")
+    -- })
+    -- use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
+
 
     if packer_bootstrap then
       require("packer").sync()

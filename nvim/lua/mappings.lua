@@ -26,3 +26,10 @@ keymap("t", "kj", "<C-\\><C-n>", default_opts)
 -- Keymap zz to save on normal mode
 keymap("n", "zz", ":update<CR>", default_opts)
 
+-- Keymap the trouble shortcuts for diagnostics
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", default_opts)
+vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", default_opts)
+vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", default_opts)
+vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", default_opts)
+vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", default_opts)
+vim.keymap.set("n", "<leader>xr", "<cmd>TroubleToggle lsp_references<cr>", default_opts)
