@@ -26,6 +26,15 @@ keymap("t", "kj", "<C-\\><C-n>", default_opts)
 -- Keymap zz to save on normal mode
 keymap("n", "zz", ":update<CR>", default_opts)
 
+-- Keymap to copy and paste from os cliboard quickly
+keymap("n", "<leader>y", "\"+y", default_opts)
+keymap("n", "<leader>Y", "\"+Y", default_opts)
+keymap("n", "<leader>p", "\"+p", default_opts)
+keymap("v", "<leader>y", "\"+y", default_opts)
+keymap("v", "<leader>Y", "\"+Y", default_opts)
+keymap("v", "<leader>p", "\"+p", default_opts)
+
+
 -- Keymap the trouble shortcuts for diagnostics
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", default_opts)
 vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", default_opts)
