@@ -85,12 +85,12 @@ return require("packer").startup({
       config = get_setup("nvim-cmp")
     })
     -- Tabnine autocomplete on cmp
-    use ({
-      'tzachar/cmp-tabnine',
-      run = './install.sh',
-      requires = 'hrsh7th/nvim-cmp',
-      config = get_setup("cmp-tabnine")
-    })
+    --use ({
+    --  'tzachar/cmp-tabnine',
+    --  run = './install.sh',
+    --  requires = 'hrsh7th/nvim-cmp',
+    --  config = get_setup("cmp-tabnine")
+    --})
     -- LSP for nvim setup
     use ({
       'neovim/nvim-lspconfig',
