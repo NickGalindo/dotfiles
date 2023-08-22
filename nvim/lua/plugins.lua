@@ -80,22 +80,22 @@ return require("packer").startup({
         "hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp",
         'quangnguyen30192/cmp-nvim-ultisnips', 'hrsh7th/cmp-nvim-lua',
         'octaltree/cmp-look', 'hrsh7th/cmp-path', 'hrsh7th/cmp-calc',
-        'f3fora/cmp-spell', 'hrsh7th/cmp-emoji'
+        'f3fora/cmp-spell', 'hrsh7th/cmp-emoji', 'hrsh7th/cmp-vsnip', 'hrsh7th/vim-vsnip', 'hrsh7th/vim-vsnip-integ'
       },
       config = get_setup("nvim-cmp")
     })
-    -- Tabnine autocomplete on cmp
-    --use ({
-    --  'tzachar/cmp-tabnine',
-    --  run = './install.sh',
-    --  requires = 'hrsh7th/nvim-cmp',
-    --  config = get_setup("cmp-tabnine")
-    --})
     -- LSP for nvim setup
     use ({
       'neovim/nvim-lspconfig',
       config = get_setup("nvim-lspconfig")
     })
+    -- LSP saga to extend nvim functionality
+    use({
+      "nvimdev/lspsaga.nvim",
+      after = "nvim-lspconfig",
+      config = get_setup("lspsaga")
+    })
+    -- Trouble to blame diagnostics in adititional widnow
     use ({
       "folke/trouble.nvim",
       requires = "kyazdani42/nvim-web-devicons",

@@ -42,3 +42,10 @@ vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
 vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", default_opts)
 vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", default_opts)
 vim.keymap.set("n", "<leader>xr", "<cmd>TroubleToggle lsp_references<cr>", default_opts)
+
+-- Keymap the lspsaga
+keymap("n", "<leader>gpd", ":Lspsaga peek_definition<CR>", default_opts)
+keymap("n", "<leader>gptd", ":Lspsaga peek_type_definition<CR>", default_opts)
+keymap("n", "<leader>gd", ":Lspsaga goto_definition", default_opts)
+keymap("n", "<leader>gtd", ":Lspsaga goto_type_definition", default_opts)
+keymap("n", "<leader>lf", ":Lspsage finder", default_opts)

@@ -1,4 +1,14 @@
 local lsp = require("lspconfig")
+
+ -- Setup lspconfig. for cmp nvim
+local lsp_defaults = lsp.util.default_config
+
+lsp_defaults.capabilities = vim.tbl_deep_extend(
+  'force',
+  lsp_defaults.capabilities,
+  require('cmp_nvim_lsp').default_capabilities()
+)
+
 util = require("lspconfig/util")
 lsp.gopls.setup{
   cmd = {"gopls", "serve"},
@@ -12,17 +22,19 @@ lsp.gopls.setup{
       staticcheck = true,
     },
   },
+  capabilities = capabilities,
 }
 lsp.pyright.setup{
-  
+  capabilities = capabilities,
 }
 lsp.clangd.setup{
-
+  capabilities = capabilities,
 }
 lsp.cmake.setup{
-
+  capabilities = capabilities,
 }
 lsp.tsserver.setup{
+  capabilities = capabilities,
   on_attach = on_attach
 }
 

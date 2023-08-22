@@ -125,11 +125,10 @@ _G.packer_plugins = {
     path = "/home/vyral/.local/share/nvim/site/pack/packer/start/cmp-spell",
     url = "https://github.com/f3fora/cmp-spell"
   },
-  ["cmp-tabnine"] = {
-    config = { 'require("setup/cmp-tabnine")' },
+  ["cmp-vsnip"] = {
     loaded = true,
-    path = "/home/vyral/.local/share/nvim/site/pack/packer/start/cmp-tabnine",
-    url = "https://github.com/tzachar/cmp-tabnine"
+    path = "/home/vyral/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
+    url = "https://github.com/hrsh7th/cmp-vsnip"
   },
   ["feline.nvim"] = {
     config = { 'require("setup/feline")' },
@@ -142,6 +141,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/vyral/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["lspsaga.nvim"] = {
+    config = { 'require("setup/lspsaga")' },
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/vyral/.local/share/nvim/site/pack/packer/opt/lspsaga.nvim",
+    url = "https://github.com/nvimdev/lspsaga.nvim"
   },
   ["nvim-autopairs"] = {
     config = { 'require("setup/nvim-autopairs")' },
@@ -162,8 +169,10 @@ _G.packer_plugins = {
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
+    after = { "lspsaga.nvim" },
     config = { 'require("setup/nvim-lspconfig")' },
     loaded = true,
+    only_config = true,
     path = "/home/vyral/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
@@ -217,50 +226,36 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/vyral/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/home/vyral/.local/share/nvim/site/pack/packer/start/vim-vsnip",
+    url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  ["vim-vsnip-integ"] = {
+    loaded = true,
+    path = "/home/vyral/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ",
+    url = "https://github.com/hrsh7th/vim-vsnip-integ"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-require("setup/gitsigns")
-time([[Config for gitsigns.nvim]], false)
--- Config for: trouble.nvim
-time([[Config for trouble.nvim]], true)
-require("setup/trouble")
-time([[Config for trouble.nvim]], false)
--- Config for: cmp-tabnine
-time([[Config for cmp-tabnine]], true)
-require("setup/cmp-tabnine")
-time([[Config for cmp-tabnine]], false)
--- Config for: nvim-notify
-time([[Config for nvim-notify]], true)
-require("setup/nvim-notify")
-time([[Config for nvim-notify]], false)
--- Config for: onedark.nvim
-time([[Config for onedark.nvim]], true)
-require("setup/onedark")
-time([[Config for onedark.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require("setup/nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 require("setup/nvim-tree")
 time([[Config for nvim-tree.lua]], false)
--- Config for: bufferline.nvim
-time([[Config for bufferline.nvim]], true)
-require("setup/bufferline")
-time([[Config for bufferline.nvim]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require("setup/nvim-lspconfig")
-time([[Config for nvim-lspconfig]], false)
 -- Config for: nvim-colorizer.lua
 time([[Config for nvim-colorizer.lua]], true)
 require("setup/nvim-colorizer")
 time([[Config for nvim-colorizer.lua]], false)
+-- Config for: onedark.nvim
+time([[Config for onedark.nvim]], true)
+require("setup/onedark")
+time([[Config for onedark.nvim]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+require("setup/trouble")
+time([[Config for trouble.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 require("setup/nvim-autopairs")
@@ -269,14 +264,42 @@ time([[Config for nvim-autopairs]], false)
 time([[Config for feline.nvim]], true)
 require("setup/feline")
 time([[Config for feline.nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require("setup/telescope")
-time([[Config for telescope.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require("setup/nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
+-- Config for: nvim-notify
+time([[Config for nvim-notify]], true)
+require("setup/nvim-notify")
+time([[Config for nvim-notify]], false)
+-- Config for: bufferline.nvim
+time([[Config for bufferline.nvim]], true)
+require("setup/bufferline")
+time([[Config for bufferline.nvim]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 require("setup/nvim-cmp")
 time([[Config for nvim-cmp]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require("setup/telescope")
+time([[Config for telescope.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require("setup/nvim-lspconfig")
+time([[Config for nvim-lspconfig]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+require("setup/gitsigns")
+time([[Config for gitsigns.nvim]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd lspsaga.nvim ]]
+
+-- Config for: lspsaga.nvim
+require("setup/lspsaga")
+
+time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
