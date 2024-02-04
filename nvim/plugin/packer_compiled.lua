@@ -186,7 +186,7 @@ _G.packer_plugins = {
     config = { 'require("setup/nvim-tree")' },
     loaded = true,
     path = "/home/vyral/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
-    url = "https://github.com/kyazdani42/nvim-tree.lua"
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     config = { 'require("setup/nvim-treesitter")' },
@@ -195,9 +195,10 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
+    config = { 'require("setup/nvim-web-devicons")' },
     loaded = true,
     path = "/home/vyral/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["onedark.nvim"] = {
     config = { 'require("setup/onedark")' },
@@ -240,10 +241,38 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-notify
+time([[Config for nvim-notify]], true)
+require("setup/nvim-notify")
+time([[Config for nvim-notify]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 require("setup/nvim-tree")
 time([[Config for nvim-tree.lua]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require("setup/nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require("setup/telescope")
+time([[Config for telescope.nvim]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+require("setup/trouble")
+time([[Config for trouble.nvim]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+require("setup/nvim-cmp")
+time([[Config for nvim-cmp]], false)
+-- Config for: nvim-web-devicons
+time([[Config for nvim-web-devicons]], true)
+require("setup/nvim-web-devicons")
+time([[Config for nvim-web-devicons]], false)
+-- Config for: feline.nvim
+time([[Config for feline.nvim]], true)
+require("setup/feline")
+time([[Config for feline.nvim]], false)
 -- Config for: nvim-colorizer.lua
 time([[Config for nvim-colorizer.lua]], true)
 require("setup/nvim-colorizer")
@@ -252,46 +281,22 @@ time([[Config for nvim-colorizer.lua]], false)
 time([[Config for onedark.nvim]], true)
 require("setup/onedark")
 time([[Config for onedark.nvim]], false)
--- Config for: trouble.nvim
-time([[Config for trouble.nvim]], true)
-require("setup/trouble")
-time([[Config for trouble.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require("setup/nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
--- Config for: feline.nvim
-time([[Config for feline.nvim]], true)
-require("setup/feline")
-time([[Config for feline.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require("setup/nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
--- Config for: nvim-notify
-time([[Config for nvim-notify]], true)
-require("setup/nvim-notify")
-time([[Config for nvim-notify]], false)
--- Config for: bufferline.nvim
-time([[Config for bufferline.nvim]], true)
-require("setup/bufferline")
-time([[Config for bufferline.nvim]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-require("setup/nvim-cmp")
-time([[Config for nvim-cmp]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require("setup/telescope")
-time([[Config for telescope.nvim]], false)
 -- Config for: nvim-lspconfig
 time([[Config for nvim-lspconfig]], true)
 require("setup/nvim-lspconfig")
 time([[Config for nvim-lspconfig]], false)
+-- Config for: bufferline.nvim
+time([[Config for bufferline.nvim]], true)
+require("setup/bufferline")
+time([[Config for bufferline.nvim]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
 require("setup/gitsigns")
 time([[Config for gitsigns.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require("setup/nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd lspsaga.nvim ]]

@@ -34,6 +34,10 @@ return require("packer").startup({
       "navarasu/onedark.nvim",
       config = get_setup("onedark"),
     })
+    use({
+      "nvim-tree/nvim-web-devicons",
+      config = get_setup("nvim-web-devicons")
+    })
     -- Treesitter install for neovim
     use ({
       "nvim-treesitter/nvim-treesitter",
@@ -49,9 +53,9 @@ return require("packer").startup({
     })
     -- Nvim tree install for file explorer
     use {
-      'kyazdani42/nvim-tree.lua',
+      'nvim-tree/nvim-tree.lua',
       requires = {
-        'kyazdani42/nvim-web-devicons', -- optional, for file icon
+        'nvim-tree/nvim-web-devicons', -- optional
       },
       --tag = 'nightly', -- optional, updated every week. (see issue #1193)
       config = get_setup("nvim-tree")
@@ -60,7 +64,7 @@ return require("packer").startup({
     use ({
       'akinsho/bufferline.nvim',
       tag = "v2.*",
-      requires = 'kyazdani42/nvim-web-devicons',
+      requires = 'nvim-tree/nvim-web-devicons',
       config = get_setup("bufferline")
     })
     -- Git decorators for neovim
@@ -98,7 +102,7 @@ return require("packer").startup({
     -- Trouble to blame diagnostics in adititional widnow
     use ({
       "folke/trouble.nvim",
-      requires = "kyazdani42/nvim-web-devicons",
+      requires = "nvim-tree/nvim-web-devicons",
       config = get_setup("trouble")
     })
     use ({
@@ -114,19 +118,6 @@ return require("packer").startup({
       "norcalli/nvim-colorizer.lua",
       config = get_setup("nvim-colorizer")
     })
-    --use({
-    --  "glepnir/lspsaga.nvim",
-    --  opt = true,
-    --  branch = "main",
-    --  event = "LspAttach"
-    --  config = function()
-    --    require("lspsaga").setup({})
-    --end,
-    --  requires = {
-    --    {"nvim-tree/nvim-web-devicons"}, --Please make sure you install markdown and markdown_inline parser
-    --    {"nvim-treesitter/nvim-treesitter"}
-    --  }
-    --})
 
     -- Markdown Preview
     -- use({

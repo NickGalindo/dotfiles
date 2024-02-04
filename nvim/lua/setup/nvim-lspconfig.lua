@@ -37,6 +37,17 @@ lsp.tsserver.setup{
   capabilities = capabilities,
   on_attach = on_attach
 }
+lsp.gopls.setup({
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+      gofumpt = true,
+    },
+  },
+})
 
 -- Turn off virtual text for diagnostics
 vim.diagnostic.config({
