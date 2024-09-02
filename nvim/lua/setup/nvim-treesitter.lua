@@ -1,6 +1,6 @@
 local treesitter = require("nvim-treesitter.configs")
 treesitter.setup({
-  ensure_installed = {"c", "cpp", "python", "lua", "rust", "yaml", "json", "go", "gomod", "gosum", "gowork", "typescript", "javascript", "tsx", "java"},
+  ensure_installed = {"c", "cpp", "python", "lua", "rust", "yaml", "json", "go", "gomod", "gosum", "gowork", "typescript", "javascript", "tsx", "java", "xml"},
   sync_install = true,
   highlight = {
     enable = true,
