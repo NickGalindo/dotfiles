@@ -1,8 +1,14 @@
-local nvim_tree = require("nvim-tree")
-nvim_tree.setup({
+return {
+  "nvim-tree/nvim-tree.lua",
+  version = "*",
+  lazy = false,
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
+  opts = {
     sort_by = "case_sensitive",
     view = {
-        width = 25,
+      width = 25,
     },
     git = {
       ignore = false,
@@ -15,4 +21,5 @@ nvim_tree.setup({
     renderer = {
       group_empty = true,
     },
-})
+  }
+}

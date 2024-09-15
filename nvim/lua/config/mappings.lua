@@ -35,12 +35,12 @@ keymap("v", "<leader>p", "\"+p", default_opts)
 
 
 -- Keymap the trouble shortcuts for diagnostics
-vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", default_opts)
-vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", default_opts)
-vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", default_opts)
-vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", default_opts)
-vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", default_opts)
-vim.keymap.set("n", "<leader>xr", "<cmd>TroubleToggle lsp_references<cr>", default_opts)
+vim.keymap.set("n", "<leader>xx", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", default_opts)
+vim.keymap.set("n", "<leader>xw", "<cmd>Trouble diagnostics toggle<cr>", default_opts)
+vim.keymap.set("n", "<leader>xd", "<cmd>Trouble symbols toggle<cr>", default_opts)
+vim.keymap.set("n", "<leader>xl", "<cmd>Trouble loclist toggle<cr>", default_opts)
+vim.keymap.set("n", "<leader>xq", "<cmd>Trouble qflist toggle<cr>", default_opts)
+vim.keymap.set("n", "<leader>xr", "<cmd>Trouble lsp toggle<cr>", default_opts)
 
 -- Keymap the lspsaga
 keymap("n", "<leader>rd", ":Lspsaga peek_definition<CR>", default_opts)
@@ -48,7 +48,7 @@ keymap("n", "<leader>rtd", ":Lspsaga peek_type_definition<CR>", default_opts)
 keymap("n", "<leader>rgd", ":Lspsaga goto_definition<CR>", default_opts)
 keymap("n", "<leader>rgtd", ":Lspsaga goto_type_definition<CR>", default_opts)
 keymap("n", "<leader>rf", ":Lspsaga finder<CR>", default_opts)
-keymap("n", "<leader>rr", ":Lspsaga rename<CR>", default_opts)
+keymap("n", "<leader>rr", ":Lspsakga rename<CR>", default_opts)
 
 -- Telescope mappings
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", default_opts)
