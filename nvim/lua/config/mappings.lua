@@ -48,7 +48,7 @@ keymap("n", "<leader>rtd", ":Lspsaga peek_type_definition<CR>", default_opts)
 keymap("n", "<leader>rgd", ":Lspsaga goto_definition<CR>", default_opts)
 keymap("n", "<leader>rgtd", ":Lspsaga goto_type_definition<CR>", default_opts)
 keymap("n", "<leader>rf", ":Lspsaga finder<CR>", default_opts)
-keymap("n", "<leader>rr", ":Lspsakga rename<CR>", default_opts)
+keymap("n", "<leader>rr", ":Lspsaga rename<CR>", default_opts)
 
 -- Telescope mappings
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", default_opts)
