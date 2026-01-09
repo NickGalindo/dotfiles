@@ -21,3 +21,6 @@ vim.wo.wrap = true
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldenable = false
+
+-- Python provider fix for ubuntu24 lts
+vim.g.python3_host_prog = "/home/vyral/manualBuilds/nvim/nvim_env/bin/python3"
